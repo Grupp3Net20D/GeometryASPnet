@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.31605.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometryGrupp3", "GeometryGrupp3\GeometryGrupp3.csproj", "{5ACFE835-A660-4B48-8460-B65A389033C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometriTDD", "..\GeometriTDD\GeometriTDD.csproj", "{44B3CAA9-A49A-439D-9DA6-B1607C650FCE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometriTDD", "GeometriTDD\GeometriTDD.csproj", "{44B3CAA9-A49A-439D-9DA6-B1607C650FCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometriTDDTests", "..\GeometriTDDTests\GeometriTDDTests.csproj", "{99238ACE-9175-49E8-ACE5-C42AA238CF44}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometriTDDTests", "GeometriTDDTests\GeometriTDDTests.csproj", "{99238ACE-9175-49E8-ACE5-C42AA238CF44}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
