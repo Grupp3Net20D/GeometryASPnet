@@ -15,29 +15,27 @@ namespace GeometriTDD.Geometry
         /// Properties för höjden och längden
         /// </summary>
         public float Heigth { get; set; }
-        public float Length { get; set; }
+        public float Side { get; set; }
       
-        public Romb()
-        {
-
-        }
-
-        public Romb(float heigth, float length)
+       
+        public Romb(float heigth, float side)
         {
             Heigth = heigth;
-            Length = length;
-        }
-
-
+            Side = side;
+        }   
 
         public override float GetArea()
         {
-            return Heigth * Length;
+            if(Heigth <=0 || Side <=0) return 0;
+
+            return MathF.Round(Side * Heigth, 2);
         }
 
         public override float GetPerimeter()
         {
-            throw new NotImplementedException();
+            if (Heigth <= 0 || Side <= 0) return 0;
+
+            return MathF.Round(Side * 4, 2);
         }
     }
 }
