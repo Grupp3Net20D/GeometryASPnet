@@ -31,13 +31,13 @@ body {
 }
 .carousel-caption {
     color: #383838;
-   bottom: 0.5em;
 }
-.home-text{
-
+.carousel-indicators{
+    bottom: -1em;
+}
+.home-text {
     text-align: left;
     font-size: 1.2rem;
-   
 }
 .home-text p{
    margin-left: 12em;
