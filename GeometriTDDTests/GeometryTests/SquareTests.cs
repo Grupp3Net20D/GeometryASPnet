@@ -9,5 +9,6 @@ namespace GeometriTDDTests.GeometryTests
     [TestClass()]
     public class SquareTests
     {
+
     }
 }

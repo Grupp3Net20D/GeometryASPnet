@@ -46,7 +46,7 @@ namespace GeometriTDD.Geometry
         {
             if (Bas > 0 && Height > 0)
             {
-                return Bas * Height;
+                return MathF.Round(Bas * Height,2);
             }
             return 0;
         }
@@ -59,7 +59,7 @@ namespace GeometriTDD.Geometry
         {
             if (Bas > 0 && Height > 0)
             {
-                return Bas + Bas + Height + Height;
+                return MathF.Round(Bas + Bas + Height + Height,2);
             }
             return 0;
         }

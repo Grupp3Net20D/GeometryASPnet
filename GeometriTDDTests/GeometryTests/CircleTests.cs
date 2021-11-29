@@ -36,27 +36,27 @@ namespace GeometriTDDTests.GeometryTests
         }
 
         [TestMethod]
-        [DataRow(1f, null, 0f)]
-        [DataRow(0f, 2f, 0f)]
-        public void Circle_CalculatesPerimeterWithNegativeValues_ReturnsZero(float heigth, float side, float expected)
+        [DataRow(null, 0f)]
+        [DataRow(0f, 0f)]
+        public void Circle_CalculatesPerimeterWithNegativeValues_ReturnsZero(float radie, float expected)
         {
             //Arrange 
-            var rhombus = new Romb(heigth, side);
+            var circle = new Circle(radie);
             //Act
-            var actual = rhombus.GetPerimeter();
+            var actual = circle.GetPerimeter();
             //Assert
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        [DataRow(1f, null, 0f)]
-        [DataRow(0f, 2f, 0f)]
-        public void Circle_CalculatesAreaWithNegativeValues_ReturnsZero(float heigth, float side, float expected)
+        [DataRow(null, 0f)]
+        [DataRow(0f, 0f)]
+        public void Circle_CalculatesAreaWithNegativeValues_ReturnsZero(float radie, float expected)
         {
             //Arrange 
-            var rhombus = new Romb(heigth, side);
+            var circle = new Circle(radie);
             //Act
-            var actual = rhombus.GetPerimeter();
+            var actual = circle.GetPerimeter();
             //Assert
             Assert.AreEqual(expected, actual);
         }
