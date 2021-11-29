@@ -1,3 +1,5 @@
+using System;
+
 namespace GeometriTDD.Geometry
 {
     /// <summary>
@@ -17,11 +19,14 @@ namespace GeometriTDD.Geometry
 
         }
 
-        public override float GetArea()
+        public override float GetArea() // TODO: Avrunda två decimaler eller heltal?
         {
             if (Side > 0)
             {
-                return Side;
+                float perimeter = Side * 5;
+                float tan = 1.45308506f;
+                float apothem = Side / tan;
+                return MathF.Round((perimeter * (apothem)) / 2, 2);
             }
             return 0;
         }
