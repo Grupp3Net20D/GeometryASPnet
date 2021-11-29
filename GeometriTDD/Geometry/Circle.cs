@@ -39,7 +39,7 @@ namespace GeometriTDD.Geometry
         {
             if (Radie > 0)
             {
-                return Radie * Radie * 3.1415926535f;
+                return MathF.Round(Radie * Radie * 3.1415926535f, 2);
             }
             return 0;
         }
@@ -52,7 +52,7 @@ namespace GeometriTDD.Geometry
         {
             if (Radie > 0)
             {
-                return (Radie * 2) * 3.1415926535f;
+                return MathF.Round((Radie * 2) * 3.1415926535f,2);
             }
             return 0;
         }

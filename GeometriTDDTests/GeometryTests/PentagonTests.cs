@@ -13,12 +13,54 @@ namespace GeometriTDDTests.GeometryTests
     public class PentagonTests
     {
         [TestMethod()]
-        public void GetAreaOnePentagon()
+        [DataRow(10f, 172.05f)]
+        public void Pentagon_CalculatesArea_ReturnsArea(float side, float expected)
         {
-            var calc = new GeometricCalculator();
-            float expected = 172.05f;
-            var pentagon = new Pentagon(10);
-            var actual = calc.GetArea(pentagon);
+            //Arrange
+            var pentagon = new Pentagon(side);
+            //Act
+            var actual = pentagon.GetArea();
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod()]
+        [DataRow(10f, 50f)]
+        public void Pentagon_CalculatesPerimeter_ReturnsPerimeter(float side, float expected)
+        {
+            //Arrange
+            var pentagon = new Pentagon(side);
+            //Act
+            var actual = pentagon.GetPerimeter();
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        [DataRow(null, 0f)]
+        [DataRow(0f, 0f)]
+        [DataRow(-1, 0f)]
+        public void Pentagon_CalculatesPerimeterWithNegativeValues_ReturnsZero(float side, float expected)
+        {
+            //Arrange 
+            var pentagon = new Pentagon(side);
+            //Act
+            var actual = pentagon.GetPerimeter();
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        [DataRow(null, 0f)]
+        [DataRow(0f, 0f)]
+        [DataRow(-1, 0f)]
+        public void Pentagon_CalculatesAreaWithNegativeValues_ReturnsZero(float side, float expected)
+        {
+            //Arrange 
+            var pentagon = new Pentagon(side);
+            //Act
+            var actual = pentagon.GetArea();
+            //Assert
             Assert.AreEqual(expected, actual);
         }
     }
