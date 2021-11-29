@@ -24,7 +24,7 @@ namespace GeometriTDDTests.GeometryTests
 
         [TestMethod]
         [DataRow( 1f, 4f)]
-        public void Square_CalculatesPerimeter_ReturnsArea(float side, float expected)
+        public void Square_CalculatesPerimeter_ReturnsPerimeter(float side, float expected)
         {
             //Arrange 
             var square = new Square(side);
