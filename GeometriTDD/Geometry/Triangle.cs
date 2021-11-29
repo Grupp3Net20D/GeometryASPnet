@@ -40,7 +40,7 @@ namespace GeometriTDD.Geometry
         {
             if (Side > 0)
             {
-                return Side * Side / 2;
+                return MathF.Round(Side * Side * MathF.Sqrt(3) / 4, 2);
             }
             return 0;
         }
@@ -53,7 +53,7 @@ namespace GeometriTDD.Geometry
         {
             if (Side > 0)
             {
-                return Side * 3;
+                return MathF.Round(Side * 3, 2);
             }
             return 0;
         }

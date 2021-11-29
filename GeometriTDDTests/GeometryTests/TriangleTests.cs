@@ -11,7 +11,7 @@ namespace GeometriTDDTests.GeometryTests
     public class TriangleTests
     {
         [TestMethod()]
-        [DataRow(10f, 50f)]
+        [DataRow(10f, 43.3f)]
         public void Triangle_CalculatesArea_ReturnsArea(float side, float expected)
         {
             //Arrange

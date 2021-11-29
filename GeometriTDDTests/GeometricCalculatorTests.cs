@@ -17,7 +17,7 @@ namespace GeometriTDD.Tests
         public void GetAreaTest()
         {
             var calc = new GeometricCalculator();
-            float expected = 428.54f; // 100 + 78.54 + 200 + 50 = 428.54
+            float expected = 421.84f; // 100 + 78.54 + 200 + 43.3 = 421.84
             var actual = calc.GetArea(new GeometricThing[]
             {
                 new Geometry.Square(10),
@@ -62,7 +62,7 @@ namespace GeometriTDD.Tests
         public void GetAreaTestWeirdValues()
         {
             var calc = new GeometricCalculator();
-            float expected = 150f; // 100 + 0 + 0 + 50 = 150
+            float expected = 143.3f; // 100 + 0 + 0 + 43.3 = 143.3
             var actual = calc.GetArea(new GeometricThing[]
             {
                 new Geometry.Square(10),
