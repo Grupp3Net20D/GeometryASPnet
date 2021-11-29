@@ -1,21 +1,46 @@
 ﻿@model IEnumerable<GeometryGrupp3.Models.Circle>
 
 @{
-    ViewData["Title"] = "circleView";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Cirkel</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/Shapes.css" />
+</head>
+<body>
+    <header>
+        <img src="~/img/cirkel.png" alt="Cirkel" class="shapeImg" />
+    </header>
+    <div class="calculator">
+        <div class="numbersForm">
+            <form action="/" method="post">
+                <h3>Kalkylator</h3>
+                Ange radie <input type="text" name="radius" value="" class="inputField"/>
+                <button href="#" class="calculateButton">Beräkna</button>
+            </form>
+            <div class="result">
+                <div class="perimeter">
+                    <h5>Omkrets</h5>
+                    <div class="perimeterDisplay">
+                    </div>
+                </div>
+                <div class="area">
+                    <h5>Area</h5>
+                    <div class="areaDisplay">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="border-top footer text-muted" id="footer">
+        <div class="container buttonFooter">
+            <p>&copy; 2021 - GeomeTre</p>
+        </div>
+    </footer>
+</body>
+</html>
+
 }
-
-<h1>circleView</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-       
-    </tbody>
-</table>
