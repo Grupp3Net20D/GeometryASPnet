@@ -1,0 +1,50 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - Triangel</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/Shapes.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <img src="~/img/triangel.png" alt="Triangel" class="shapeImg" />
+        </header>
+        <div class="calculator">
+            <div class="numbersForm">
+                <form action="/" method="post">
+                    <h3>Kalkylator</h3>
+                    Ange sida på liksidig triangel <input type="text" name="radius" value="" class="inputField" />
+                    <button href="#" class="calculateButton">Beräkna</button>
+                </form>
+                <div class="result">
+                    <div class="perimeter">
+                        <h5>Omkrets</h5>
+                        <div class="perimeterDisplay">
+                        </div>
+                    </div>
+                    <div class="area">
+                        <h5>Area</h5>
+                        <div class="areaDisplay">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="border-top footer text-muted" id="footer">
+            <div class="container buttonFooter">
+                <p>&copy; 2021 - GeomeTre</p>
+            </div>
+        </footer>
+    </body>
+</html>
+
+}
