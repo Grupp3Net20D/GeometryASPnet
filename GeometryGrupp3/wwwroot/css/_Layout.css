@@ -1,0 +1,55 @@
+﻿
+.navbar {
+    background-color: #479A76;
+    margin:0;
+    padding:0;
+}
+#navbarBG {
+    background-color: #479A76;
+}
+
+#footer {
+    background-color: #479A76;
+}
+
+.geoLogo{
+    height:4.5em;
+    width:4em;
+}
+
+.nav-item {
+    background-color: #FEB93F;
+    margin:1em;
+    border-style:solid;
+    border-radius:3%;
+    width:6em;
+    text-align:center;
+}
+
+.navbar-nav{
+    margin-left:3em;
+}
+
+.buttonFooter {
+    background-color: #FEB93F;
+    width: 15em;
+    height: 3em;
+    border-radius: 3%;
+    position: fixed;
+    left:42.5vw;
+    bottom: 1em;
+    text-align: center;
+    padding: 1em;
+}
+
+.footer{
+    position:fixed;
+    bottom:0;
+    width:100vw;
+    height:6em;
+}
+
+
+
+
+
