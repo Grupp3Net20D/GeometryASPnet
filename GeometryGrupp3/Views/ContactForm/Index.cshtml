@@ -1,0 +1,50 @@
+﻿@model GeometryGrupp3.Models.ContactForm
+
+
+@{
+    ViewData["Title"] = "Form";
+}
+
+<link href="~/css/contactForm.css" rel="stylesheet" runat="server" type="text/css" />
+<div contact-header>
+    <h1>Kontakta oss</h1>
+    <h4>Har ni en fråga eller har något ni vill meddela oss? Fyll i formuläret nedan.</h4>
+    <h4>Glöm inte att följa vårt nyhetsbrev för att få de senaste nyheterna om oss och de senast tillagda formerna.</h4>
+    <br>
+    <br>
+
+</div>
+<div class="contact-form">
+    <form asp-action="Index" asp-controller="ContactForm">
+        <label asp-for="Fname">Förnamn:</label>
+        <br>
+        <input class="form" asp-for="Fname" placeholder="Förnamn">
+        <br>
+        <br>
+        <label asp-for="Lname">Efternamn:</label>
+        <br>
+        <input class="form" asp-for="Lname" placeholder="Efternamn">
+        <br>
+        <br>
+        <label asp-for="Email">Email:</label>
+        <br>
+        <input class="form" asp-for="Email" placeholder="Din email">
+        <br>
+        <br>
+        <label asp-for="Msg">Meddelande</label>
+        <br>
+        <textarea class="form" asp-for="Msg" placeholder="Ditt meddelande..." style="height:300px"></textarea>
+        <br>
+        <br>
+        <p>Missa inga nya former! </p>
+        <p>Vi lägger ofta till nya former att göra beräkningar på.</p>
+        <input asp-for="HasSubscribedToNewsLetter" type="checkbox">
+        <label asp-for="HasSubscribedToNewsLetter">Prenumerera på vårt nyhetsbrev</label>
+        <br>
+        <input class="btn-primary button" type="submit" value="Skicka"/>
+        <input name="__RequestVerificationToken" type="hidden" value="<token_generated_here>">
+    </form>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
