@@ -31,8 +31,10 @@
 }
 
 .calculator {
+    font-family:'Be Vietnam Pro', sans-serif;
+    font-weight:bold;
     position: fixed;
-    top:15em;
+    top: 15em;
     left: 42.5vw;
 }
 
