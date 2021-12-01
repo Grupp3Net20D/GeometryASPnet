@@ -1,59 +1,59 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace GeometriTDD.Geometry
 {
+
     /// <summary>
-    /// Klass som räknar ut arean och omkretsen av en triangel, ärver ifrån GeometricThing.
-    /// Bestämde mig för att bara ha denna metod för att räkna ut liksidiga trianglar, kan fokusera mer på tester i sådanna fall.
+    /// Klass som räknar ut arean och omkretsen av en hexagon, ärver ifrån GeometricThing
     /// </summary>
-    public class Triangle : GeometricThing
+   public class Hexagon : GeometricThing
     {
         /// <summary>
-        /// Property för triangelns Side, används i GetArea() och GetPerimeter().
+        /// Property för hexagon Side, används i metoderna GetArea() och GetPerimeter()
         /// </summary>
         public float Side { get; set; }
 
         /// <summary>
-        /// Konstruktor som använder sig av triangelns Side.
+        /// Konstruktor som använders sig av hexagon Side.
         /// </summary>
         /// <param name="side"></param>
-        public Triangle(float side)
+        public Hexagon(float side)
         {
             Side = side;
         }
-
         /// <summary>
         /// En tom konstruktor som hanterar null värden.
         /// </summary>
-        public Triangle()
+        public Hexagon()
         {
 
         }
-
         /// <summary>
-        /// Denna metod används för att räkna triangelns area.
+        /// Denna metod används för att räkna ut hexagon area.
         /// </summary>
         /// <returns></returns>
         public override float GetArea()
         {
             if (Side > 0)
             {
-                return MathF.Round(Side * Side * MathF.Sqrt(3) / 4, 2);
+                return MathF.Round( (3 * MathF.Sqrt(3f) * Side * Side) / 2,2);
+                
             }
             return 0;
         }
-
         /// <summary>
-        /// Denna metod används för att räkna ut triangelns omkrets.
+        /// Denna metod används för att räkna ut hexagon omkrets.
         /// </summary>
         /// <returns></returns>
         public override float GetPerimeter()
         {
             if (Side > 0)
             {
-                return MathF.Round(Side * 3, 2);
+                return Side * 6;
             }
             return 0;
         }
