@@ -11,6 +11,7 @@ namespace GeometryGrupp3
     using System.Linq;
     using System.Threading.Tasks;
 
+
     public class Startup
     {
         public Startup(IConfiguration configuration)
