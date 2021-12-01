@@ -52,7 +52,7 @@ jobs:
           name: .net-app
           path: ${{env.DOTNET_ROOT}}/myapp
       - name: Automated test 🧪
-        run: dotnet test --no-build --verbosity normal
+        run: dotnet test  --verbosity normal
     
 
   deployToStaging:
