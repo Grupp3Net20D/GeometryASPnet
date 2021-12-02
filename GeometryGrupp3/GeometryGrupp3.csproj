@@ -11,7 +11,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GeometriTDD\GeometriTDD.csproj" />
-    <None Include="wwwroot\Img\kvadrat.jpg" />
   </ItemGroup>
 
 </Project>
