@@ -1,5 +1,6 @@
 ﻿namespace GeometryGrupp3.Controllers
 {
+    using GeometriTDD.Geometry;
     using Microsoft.AspNetCore.Mvc;
     using System;
     using System.Collections.Generic;
@@ -13,12 +14,16 @@
             return View();
         }
 
-        public float GetPerimeter(float radius)//måste tänka om med hur vi kommer åt properties 
+        [HttpPost]
+        public IActionResult Index(Circle circle)
         {
-            GeometriTDD.Geometry.Circle circle = new();
+            var inputRadius = circle.Radie;
 
-            var perimeter= circle.GetPerimeter();
-            return perimeter;         
+            var area = circle.GetArea();
+            var perimeter = circle.GetPerimeter();
+            ViewData["area"] = area;
+            ViewData["perimeter"] = perimeter;
+            return View();
         }
     }
 }
