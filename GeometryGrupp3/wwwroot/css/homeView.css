@@ -10,7 +10,8 @@ body {
 }
 .home-container{
     place-items: center;
-   
+    margin: auto;
+    margin-bottom: 6em;
 }
 .home-headers {
     padding: 1em;
@@ -34,6 +35,7 @@ body {
 }
 .carousel-indicators{
     bottom: -1em;
+    z-index: -1;
 }
 .home-text {
     text-align: left;
