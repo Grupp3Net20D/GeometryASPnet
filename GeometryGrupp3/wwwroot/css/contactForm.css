@@ -9,7 +9,7 @@ body {
     font-family: 'Be Vietnam Pro';
 }
 .contact-header {
-    padding: 2em;
+    margin: auto;
     width: 70%;
 }
 
@@ -20,6 +20,8 @@ body {
     border: 2px solid #212121;
     border-radius: 3px;
     box-shadow: 4px 4px 2px 1px #2121217c;
+    margin: auto;
+    margin-bottom: 6em;
 }
 
 .form {
@@ -40,8 +42,13 @@ body {
     margin: 5px;
 }
 
-    .button:hover {
-        cursor: pointer;
-        transform: scale(1.1);
-        transition: 0.5s;
-    }
+.button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+#subscribe{
+    width: 20px;
+    height: 20px;
+}

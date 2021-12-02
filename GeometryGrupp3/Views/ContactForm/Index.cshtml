@@ -6,7 +6,7 @@
 }
 
 <link href="~/css/contactForm.css" rel="stylesheet" runat="server" type="text/css" />
-<div contact-header>
+<div class="contact-header">
     <h1>Kontakta oss</h1>
     <h4>Har ni en fråga eller har något ni vill meddela oss? Fyll i formuläret nedan.</h4>
     <h4>Glöm inte att följa vårt nyhetsbrev för att få de senaste nyheterna om oss och de senast tillagda formerna.</h4>
@@ -38,7 +38,7 @@
         <br>
         <p>Missa inga nya former! </p>
         <p>Vi lägger ofta till nya former att göra beräkningar på.</p>
-        <input asp-for="HasSubscribedToNewsLetter" type="checkbox">
+        <input id="subscribe" asp-for="HasSubscribedToNewsLetter" type="checkbox">
         <label asp-for="HasSubscribedToNewsLetter">Prenumerera på vårt nyhetsbrev</label>
         <br>
         <input class="btn-primary button" type="submit" value="Skicka"/>
