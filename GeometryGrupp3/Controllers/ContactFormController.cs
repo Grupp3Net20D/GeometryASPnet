@@ -34,6 +34,8 @@ namespace GeometryGrupp3.Controllers
                 input += "\nLägg till personen som prenumerant av nyhetsbrevet.";
             }
 
+            //ViewData["input"] = input;
+
             var desktop = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
             var messageLog = Path.Combine(desktop, "Message.log");
             System.IO.File.AppendAllText(messageLog, "\n\n" + DateTime.Now + ":\n" + input);
@@ -45,7 +47,7 @@ namespace GeometryGrupp3.Controllers
             }
             else
             {
-                return View("../Home/Index");
+               return View("../Home/Index");
             }
         }
 

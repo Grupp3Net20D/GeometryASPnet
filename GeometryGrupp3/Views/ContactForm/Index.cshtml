@@ -5,6 +5,7 @@
     ViewData["Title"] = "Form";
 }
 
+
 <link href="~/css/contactForm.css" rel="stylesheet" runat="server" type="text/css" />
 <div class="contact-header">
     <h1>Kontakta oss</h1>
@@ -18,17 +19,17 @@
     <form asp-action="Index" asp-controller="ContactForm">
         <label asp-for="Fname">Förnamn:</label>
         <br>
-        <input class="form" asp-for="Fname" placeholder="Förnamn">
+        <input class="form" asp-for="Fname" name="Fname" placeholder="Förnamn" required>
         <br>
         <br>
         <label asp-for="Lname">Efternamn:</label>
         <br>
-        <input class="form" asp-for="Lname" placeholder="Efternamn">
+        <input class="form" asp-for="Lname" placeholder="Efternamn" required>
         <br>
         <br>
         <label asp-for="Email">Email:</label>
         <br>
-        <input class="form" asp-for="Email" placeholder="Din email">
+        <input class="form" asp-for="Email" placeholder="Din email" required>
         <br>
         <br>
         <label asp-for="Msg">Meddelande</label>
@@ -41,9 +42,27 @@
         <input id="subscribe" asp-for="HasSubscribedToNewsLetter" type="checkbox">
         <label asp-for="HasSubscribedToNewsLetter">Prenumerera på vårt nyhetsbrev</label>
         <br>
-        <input class="btn-primary button" type="submit" value="Skicka"/>
+        <a class="btn-primary button" href="mailto:geometre@geometre.com?subject=Hej%20GeomeTre&body=Följande%20person%20har%20skrivit%20till%20dig%20via%20kontaktformuläret:\n\nNamn:">Skicka med html</a>
+        <a class="btn-primary button" href=@ViewData["input"]>Skicka med ViewData</a>
+        <button type="submit" class="btn-primary button" onclick="submitForm();">Skicka med javascript</button>
+        <input class="btn-primary button" type="submit" value="Skicka till skrivbord" />
     </form>
+    @*<form action="../Views/Home/Index.cshtml" method="post">
+        <label for="Fname">Förnamn</label>
+        <br>
+        <input class="form" id="Fname" name="Fname" placeholder="Förnamn" required>
+        <br>
+        <br>
+        <button type="submit" class="btn-primary button" onclick="submitForm();">Submit</button>
+    </form>*@
 </div>
+<script>
+    var name = document.getElementsByName("Fname")[0].value;
+    function submitForm() {
+        window.open("mailto:geometre@geometre.com?subject=" + encodeURIComponent(name));
+    }
+</script>
+
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
