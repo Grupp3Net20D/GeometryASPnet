@@ -1,6 +1,4 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model GeometriTDD.Geometry.Triangle;
 @{
     <!DOCTYPE html>
     <html lang="en">
@@ -20,20 +18,22 @@
         </header>
         <div class="calculator">
             <div class="numbersForm">
-                <form action="/" method="post">
+                <form asp-action="Index">
                     <h3>Kalkylator</h3>
-                    Ange sida på liksidig triangel <input type="text" name="radius" value="" class="inputField" />
-                    <button href="#" class="calculateButton">Beräkna</button>
+                    Ange sida: <input type="number" asp-for="Side" class="inputField" />
+                    <input type="submit" class="calculateButton"/>
                 </form>
                 <div class="result">
                     <div class="perimeter">
                         <h5>Omkrets</h5>
                         <div class="perimeterDisplay">
+                            <p>@ViewData["perimeter"]mm</p>
                         </div>
                     </div>
                     <div class="area">
                         <h5>Area</h5>
                         <div class="areaDisplay">
+                            <p>@ViewData["area"]mm2</p>
                         </div>
                     </div>
                 </div>

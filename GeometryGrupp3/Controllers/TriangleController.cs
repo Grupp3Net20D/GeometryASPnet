@@ -9,24 +9,13 @@ namespace GeometryGrupp3.Controllers
 {
     public class TriangleController : Controller
     {
-        [HttpPost]
         public IActionResult Index(Triangle triangle)
         {
-            var result = triangle.GetArea();
-            ViewData["results"] = result;
+            var area = triangle.GetArea();
+            var perimeter = triangle.GetPerimeter();
+            ViewData["area"] = area;        
+            ViewData["perimeter"] = perimeter;
             return View();
         }
-
-        public IActionResult Detail()
-        {
-            return View();
-        }
-
-        public IActionResult SaveDetail(float side)
-        {
-            return View();
-        }
-
-
     }
 }
