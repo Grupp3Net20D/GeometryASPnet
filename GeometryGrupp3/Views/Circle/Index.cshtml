@@ -14,38 +14,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <img src="~/img/cirkel.png" alt="Cirkel" class="shapeImg" />
-    </header>
+    <div class="shapeContainer">
+        <header>
+            <img src="~/img/cirkel.png" alt="Cirkel" class="shapeImg" />
+        </header>
 
-    <div class="calculator">
-    <div class="numbersForm">                
-        <form asp-action="Index">
-            <h3>Kalkylator</h3>
-            Ange radie <input type="number" step="any" asp-for="Radie" class="inputField" />
-            <button type="submit" class="calculateButton">Beräkna</button>               
-        </form>
-            <div class="result">
-                <div class="perimeter">
-                    <h5>Omkrets</h5>
-                    <div class="perimeterDisplay">
-                        <p>@ViewData["perimeter"]</p>
+        <div class="calculator">
+            <div class="numbersForm">
+                <form asp-action="Index">
+                    <h3>Kalkylator</h3>
+                    <h6>(millimeter)</h6>
+                    Ange radie <input type="number" step="any" asp-for="Radie" class="inputField" />
+                    <button type="submit" class="calculateButton">Beräkna</button>
+                </form>
+                <div class="result">
+                    <div class="perimeter">
+                        <h5>Omkrets</h5>
+                        <div class="perimeterDisplay">
+                            <p>@ViewData["perimeter"]mm</p>
+                        </div>
                     </div>
-                </div>
-                <div class="area">
-                    <h5>Area</h5>
-                    <div class="areaDisplay">
-                        <p>@ViewData["area"]</p>
+                    <div class="area">
+                        <h5>Area</h5>
+                        <div class="areaDisplay">
+                            <p>@ViewData["area"]m&#13217;</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <footer class="border-top footer text-muted" id="footer">
-        <div class="container buttonFooter">
-            <p>&copy; 2021 - GeomeTre</p>
-        </div>
-    </footer>
+        <footer class="border-top footer text-muted" id="footer">
+            <div class="container buttonFooter">
+                <p>&copy; 2021 - GeomeTre</p>
+            </div>
+        </footer>
 </body>
 </html>
 
