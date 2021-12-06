@@ -1,15 +1,13 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap');
 body {
-    margin: 0;
+     margin: 0;
     padding: 0;
     background: #FDDEA6;
-    width: 100vw;
+     width: 100vw;
     height: 100vh;
     font-family: 'Be Vietnam Pro';
-  
 }
-.home-container{
-    place-items: center;
+.home-container {
     margin: auto;
     margin-bottom: 6em;
 }

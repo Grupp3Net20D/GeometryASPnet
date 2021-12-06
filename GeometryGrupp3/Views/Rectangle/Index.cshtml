@@ -14,41 +14,43 @@
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <img src="~/img/rektangel.png" alt="Rektangel" class="rectangleImg" />
-        </header>
+        <div class="shapeContainer">
+            <header>
+                <img src="~/img/rektangel.png" alt="Rektangel" class="rectangleImg" />
+            </header>
 
-        <div class="calculator">
-            <div class="numbersForm">
-                <form asp-action="Index">
-                    <h3>Kalkylator</h3>
-                    Ange bas <input type="number" step="any" asp-for="Bas" class="inputField" />
-                    <div class="separator"></div>
-                    Ange höjd <input type="number" step="any" asp-for="Height" class="inputFieldSmallerMargin" />
-                    <button type="submit" class="calculateButton">Beräkna</button>
-                </form>
-                <div class="result">
-                    <div class="perimeter">
-                        <h5>Omkrets</h5>
-                        <div class="perimeterDisplay">
-                            <p>@ViewData["perimeter"]</p>
+            <div class="calculator">
+                <div class="numbersForm">
+                    <form asp-action="Index">
+                        <h3>Kalkylator</h3>
+                        Ange bas <input type="number" step="any" asp-for="Bas" class="inputField" />
+                        <div class="separator"></div>
+                        Ange höjd <input type="number" step="any" asp-for="Height" class="inputFieldSmallerMargin" />
+                        <button type="submit" class="calculateButton">Beräkna</button>
+                    </form>
+                    <div class="result">
+                        <div class="perimeter">
+                            <h5>Omkrets</h5>
+                            <div class="perimeterDisplay">
+                                <p>@ViewData["perimeter"]mm</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="area">
-                        <h5>Area</h5>
-                        <div class="areaDisplay">
-                            <p>@ViewData["area"]</p>
+                        <div class="area">
+                            <h5>Area</h5>
+                            <div class="areaDisplay">
+                                <p>@ViewData["area"]m&#13217;</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <footer class="border-top footer text-muted" id="footer">
-            <div class="container buttonFooter">
-                <p>&copy; 2021 - GeomeTre</p>
-            </div>
-        </footer>
-    </body>
+            <footer class="border-top footer text-muted" id="footer">
+                <div class="container buttonFooter">
+                    <p>&copy; 2021 - GeomeTre</p>
+                </div>
+            </footer>
+</body>
 </html>
 
 }
