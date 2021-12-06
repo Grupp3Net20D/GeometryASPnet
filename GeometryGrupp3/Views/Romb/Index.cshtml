@@ -23,9 +23,10 @@
                     <form asp-action="Index">
                         <h3>Kalkylator</h3>
                         <h6>(millimeter)</h6>
-                        Ange sidan <input type="number" step="any" asp-for="Side" class="inputField" />
-                        <div class="separator"></div>
-                        Ange höjden <input type="number" step="any" asp-for="Heigth" class="inputFieldSmallerMargin" />
+                        <label>Ange sida:</label>
+                        <input type="text" asp-for="Side" class="inputField" required />
+                        <label>Ange höjd:</label>
+                        <input type="text" asp-for="Heigth" class="inputField" />
                         <button type="submit" class="calculateButton">Beräkna</button>
                     </form>
                     <div class="result">
@@ -43,13 +44,14 @@
                         </div>
                     </div>
                 </div>
+                <div asp-validation-summary="All"></div>
             </div>
         </div>
-            <footer class="border-top footer text-muted" id="footer">
-                <div class="container buttonFooter">
-                    <p>&copy; 2021 - GeomeTre</p>
-                </div>
-            </footer>
+        <footer class="border-top footer text-muted" id="footer">
+            <div class="container buttonFooter">
+                <p>&copy; 2021 - GeomeTre</p>
+            </div>
+        </footer>
     </body>
     </html>
 
