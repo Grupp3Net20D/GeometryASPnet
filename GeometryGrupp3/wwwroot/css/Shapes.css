@@ -1,13 +1,18 @@
 ﻿body {
     background-color: #FDDEA6;
+    
+}
+.shapeContainer{
+   height: calc(100vh - 8em);
+    position: relative;
 }
 
 .shapeImg{
     width:16em;
     height:15em;
-    position:fixed;
-    top:10em;
-    left:5em;
+    position:absolute;
+    top:5em;
+    left:-8em;
 }
 
 
@@ -33,9 +38,10 @@
 .calculator {
     font-family:'Be Vietnam Pro', sans-serif;
     font-weight:bold;
-    position: fixed;
-    top: 15em;
-    left: 42.5vw;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .numbersForm {
@@ -93,4 +99,22 @@
     border-style:solid;
     margin-left:1em;
     border-color:black;
+}
+
+.rectangleImg {
+    width: 20em;
+    height: 12em;
+    position: fixed;
+    top: 10em;
+    left: 5em;
+}
+
+.separator{
+    height:1em;
+}
+
+.inputFieldSmallerMargin {
+    border-style: solid;
+    margin-left: 0.7em;
+    border-color: black;
 }
