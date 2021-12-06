@@ -10,7 +10,7 @@
     {
         public IActionResult Index()
         {
-            return View();
+            return View("Index");
         }
 
         public float GetPerimeter(float radius)//måste tänka om med hur vi kommer åt properties 
