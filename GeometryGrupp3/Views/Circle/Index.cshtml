@@ -24,7 +24,7 @@
                 <form asp-action="Index">
                     <h3>Kalkylator</h3>
                     <h6>(millimeter)</h6>
-                    Ange radie <input type="number" step="any" asp-for="Radie" class="inputField" />
+                    Ange radie <input type="text" asp-for="Radie" class="inputField" required/>
                     <button type="submit" class="calculateButton">Beräkna</button>
                 </form>
                 <div class="result">
@@ -42,6 +42,7 @@
                     </div>
                 </div>
             </div>
+           <div asp-validation-summary="All"></div>
         </div>
     </div>
         <footer class="border-top footer text-muted" id="footer">

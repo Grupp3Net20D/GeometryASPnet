@@ -24,9 +24,9 @@
                     <form asp-action="Index">
                         <h3>Kalkylator</h3>
                         <h6>(millimeter)</h6>
-                        Ange basen <input type="number" step="any" asp-for="Bas" class="inputField" />
+                        Ange basen <input type="text" asp-for="Bas" class="inputField" required/>
                         <div class="separator"></div>
-                        Ange höjden <input type="number" step="any" asp-for="Height" class="inputFieldSmallerMargin" />
+                        Ange höjden <input type="text" asp-for="Height" class="inputFieldSmallerMargin" required/>
                         <button type="submit" class="calculateButton">Beräkna</button>
                     </form>
                     <div class="result">
@@ -44,6 +44,7 @@
                         </div>
                     </div>
                 </div>
+                <div asp-validation-summary="All"></div>
             </div>
         </div>
             <footer class="border-top footer text-muted" id="footer">
