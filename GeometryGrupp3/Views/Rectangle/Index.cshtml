@@ -16,16 +16,17 @@
     <body>
         <div class="shapeContainer">
             <header>
-                <img src="~/img/rektangel.png" alt="Rektangel" class="rectangleImg" />
+                <img src="~/img/rektangel.png" alt="Rektangel" class="shapeImg rectangleImg" />
             </header>
 
             <div class="calculator">
                 <div class="numbersForm">
                     <form asp-action="Index">
                         <h3>Kalkylator</h3>
-                        Ange bas <input type="number" step="any" asp-for="Bas" class="inputField" />
+                        <h6>(millimeter)</h6>
+                        Ange basen <input type="number" step="any" asp-for="Bas" class="inputField" />
                         <div class="separator"></div>
-                        Ange höjd <input type="number" step="any" asp-for="Height" class="inputFieldSmallerMargin" />
+                        Ange höjden <input type="number" step="any" asp-for="Height" class="inputFieldSmallerMargin" />
                         <button type="submit" class="calculateButton">Beräkna</button>
                     </form>
                     <div class="result">
@@ -50,7 +51,7 @@
                     <p>&copy; 2021 - GeomeTre</p>
                 </div>
             </footer>
-</body>
+    </body>
 </html>
 
 }
