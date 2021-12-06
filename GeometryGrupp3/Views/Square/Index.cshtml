@@ -24,7 +24,7 @@
                         <h3>Kalkylator</h3>
                         <h6>(millimeter)</h6>
                         <label>Ange basen </label>
-                        <input type="number" class="inputField" asp-for="Side" />
+                        <input type="text" class="inputField" asp-for="Side" required/>
                         <button type="submit" class="calculateButton">Beräkna</button>
                     </form>
                     <div class="result">
@@ -42,6 +42,7 @@
                         </div>
                     </div>
                 </div>
+                <div asp-validation-summary="All"></div>
             </div>
         </div>
         <footer class="border-top footer text-muted" id="footer">
