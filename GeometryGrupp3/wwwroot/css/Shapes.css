@@ -94,3 +94,21 @@
     margin-left:1em;
     border-color:black;
 }
+
+.rectangleImg {
+    width: 20em;
+    height: 12em;
+    position: fixed;
+    top: 10em;
+    left: 5em;
+}
+
+.separator{
+    height:1em;
+}
+
+.inputFieldSmallerMargin {
+    border-style: solid;
+    margin-left: 0.7em;
+    border-color: black;
+}
