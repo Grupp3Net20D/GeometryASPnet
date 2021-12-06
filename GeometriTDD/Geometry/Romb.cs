@@ -16,8 +16,13 @@ namespace GeometriTDD.Geometry
         /// </summary>
         public float Heigth { get; set; }
         public float Side { get; set; }
-      
-       
+
+
+        public Romb()
+        {
+
+        }
+
         public Romb(float heigth, float side)
         {
             Heigth = heigth;
@@ -33,7 +38,7 @@ namespace GeometriTDD.Geometry
 
         public override float GetPerimeter()
         {
-            if (Heigth <= 0 || Side <= 0) return 0;
+            if (Side <= 0) return 0;
 
             return MathF.Round(Side * 4, 2);
         }

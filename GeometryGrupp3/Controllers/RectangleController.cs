@@ -7,7 +7,7 @@
     using System.Linq;
     using System.Threading.Tasks;
 
-    public class CircleController : Controller
+    public class RectangleController : Controller
     {
         public IActionResult Index()
         {
@@ -15,12 +15,10 @@
         }
 
         [HttpPost]
-        public IActionResult Index(Circle circle)
+        public IActionResult Index(Rectangle rectangle)
         {
-            var inputRadius = circle.Radie;
-
-            var area = circle.GetArea();
-            var perimeter = circle.GetPerimeter();
+            var area = rectangle.GetArea();
+            var perimeter = rectangle.GetPerimeter();
             ViewData["area"] = area;
             ViewData["perimeter"] = perimeter;
             return View();
