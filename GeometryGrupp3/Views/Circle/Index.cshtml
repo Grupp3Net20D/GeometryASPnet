@@ -1,4 +1,4 @@
-﻿@model IEnumerable<GeometryGrupp3.Models.Circle>
+﻿@model GeometriTDD.Geometry.Circle; 
 
 @{
 <!DOCTYPE html>
@@ -17,22 +17,25 @@
     <header>
         <img src="~/img/cirkel.png" alt="Cirkel" class="shapeImg" />
     </header>
+
     <div class="calculator">
-        <div class="numbersForm">
-            <form action="/" method="post">
-                <h3>Kalkylator</h3>
-                Ange radie <input type="text" name="radius" value="" class="inputField" />
-                <button href="#" class="calculateButton">Beräkna</button>
-            </form>
+    <div class="numbersForm">                
+        <form asp-action="Index">
+            <h3>Kalkylator</h3>
+            Ange radie <input type="number" step="any" asp-for="Radie" class="inputField" />
+            <button type="submit" class="calculateButton">Beräkna</button>               
+        </form>
             <div class="result">
                 <div class="perimeter">
                     <h5>Omkrets</h5>
                     <div class="perimeterDisplay">
+                        <p>@ViewData["perimeter"]</p>
                     </div>
                 </div>
                 <div class="area">
                     <h5>Area</h5>
                     <div class="areaDisplay">
+                        <p>@ViewData["area"]</p>
                     </div>
                 </div>
             </div>
