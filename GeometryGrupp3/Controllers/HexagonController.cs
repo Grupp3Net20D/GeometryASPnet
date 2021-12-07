@@ -17,7 +17,7 @@ namespace GeometryGrupp3.Controllers
             ViewData["perimeter"] = perimeter;
             ViewData["area"] = area;
             
-            return View();
+            return View("Index");
         }
 
 
