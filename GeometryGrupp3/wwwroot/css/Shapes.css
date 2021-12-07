@@ -71,16 +71,16 @@
 .result{
     display:flex;
     flex-direction:row;
-    margin-left: 5em;
-    margin-top:2.2em;
+    margin-top:2em;
+    justify-content: space-evenly;
 }
 
 .perimeter{
    margin-right:1.5em;
 }
 .perimeterDisplay {
-    height: 5em;
-    width: 5em;
+    height: 4em;
+    width: 7.5em;
     background-color: white;
     border-style: solid;
 }
@@ -89,8 +89,8 @@
     margin-left: 1.5em;
 }
 .areaDisplay {
-    height: 5em;
-    width: 5em;
+    height: 4em;
+    width: 7.5em;
     background-color: white;
     border-style:solid;
 }
