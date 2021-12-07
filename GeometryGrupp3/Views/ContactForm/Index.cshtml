@@ -1,0 +1,65 @@
+﻿@model GeometryGrupp3.Models.ContactForm
+
+
+@{
+    ViewData["Title"] = "Form";
+    }
+
+
+<link href="~/css/contactForm.css" rel="stylesheet" runat="server" type="text/css" />
+<div class="contact-header">
+    <h1>Kontakta oss</h1>
+    <h5>Har ni en fråga eller har något ni vill meddela oss? Fyll i formuläret nedan.</h5>
+    <h5>Glöm inte att följa vårt nyhetsbrev för att få de senaste nyheterna om oss och de senast tillagda formerna.</h5>
+    <br>
+    <br>
+
+</div>
+<div class="contact-form">
+    <form name="subscribe" id="subscribe_frm" action="#">
+        <label for="Fname">Förnamn:</label>
+        <br>
+        <input class="form" id="Fname" name="Fname" placeholder="Förnamn" required>
+        <br>
+        <br>
+        <label for="Lname">Efternamn:</label>
+        <br>
+        <input class="form" id="Lname" placeholder="Efternamn" required>
+        <br>
+        <br>
+        <label for="Email">Email:</label>
+        <br>
+        <input class="form" id="Email" placeholder="Din email" required>
+        <br>
+        <br>
+        <label for="Msg">Meddelande</label>
+        <br>
+        <textarea class="form" id="Msg" placeholder="Ditt meddelande..." style="height:200px"></textarea>
+        <br>
+        <br>
+        <p>Missa inga nya former! </p>
+        <p>Vi lägger ofta till nya former att göra beräkningar på.</p>
+        <input id="Subscribe" name="Subscribe" type="checkbox">
+        <label for="Subscribe">Prenumerera på vårt nyhetsbrev</label>
+        <br>
+        <input class="btn-primary button" type="button" name="submit" value="Skicka" onclick="submitForm();" />
+    </form>
+</div>
+
+<script>
+    function submitForm() {
+        var fname = document.getElementById("Fname");
+        var lname = document.getElementById("Lname");
+        var email = document.getElementById("Email");
+        var msg = document.getElementById("Msg");
+        var subscribe = document.getElementById("Subscribe");
+        var newsLetter ="";
+        subscribe.checked ? newsLetter = "Lägg till mig som prenumerant på nyhetsbrevet, tack!" : newsLetter;
+               
+        window.open(`mailto:geometre@geometre.com?subject=Hej%20GeomeTre&body=Följande%20person%20har%20skrivit%20till%20er%20via%20kontaktformuläret:%0D%0A%0D%0A${fname.value}%20${lname.value}%0D%0AEmail:%20${email.value}%0D%0AMeddelande:%20${msg.value}%0D%0A${newsLetter}`)
+}
+</script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
