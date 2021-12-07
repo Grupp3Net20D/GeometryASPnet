@@ -22,7 +22,7 @@
 
   <ItemGroup>
     <Content Update="wwwroot\Img\cirkel.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
     <Content Update="wwwroot\Img\cirkelHome.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
