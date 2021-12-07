@@ -16,7 +16,7 @@ namespace GeometryGrupp3.Models
 
         public string Msg { get; set; }
 
-        public bool HasSubscribedToNewsLetter { get; set; }
+        public bool HasSubscribedToNewsLetter { get; set; } = false;
 
         public string Contact()
         {

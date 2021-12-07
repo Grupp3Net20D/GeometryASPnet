@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net.Mail;
 using System.Threading.Tasks;
 
 namespace GeometryGrupp3.Controllers
@@ -34,23 +35,24 @@ namespace GeometryGrupp3.Controllers
                 input += "\nLägg till personen som prenumerant av nyhetsbrevet.";
             }
 
-            //ViewData["input"] = input;
+                          //ViewData["input"] = input;
 
-            var desktop = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
-            var messageLog = Path.Combine(desktop, "Message.log");
-            System.IO.File.AppendAllText(messageLog, "\n\n" + DateTime.Now + ":\n" + input);
+                var desktop = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+                var messageLog = Path.Combine(desktop, "Message.log");
+                System.IO.File.AppendAllText(messageLog, "\n\n" + DateTime.Now + ":\n" + input);
 
-            if (model.Fname == null || model.Lname == null || model.Email == null)
-            {
+                if (model.Fname == null || model.Lname == null || model.Email == null)
+                {
 
-                return View();
-            }
-            else
-            {
-               return View("../Home/Index");
-            }
+                    return View();
+                }
+                else
+                {
+                    return View("../Home/Index");
+                }
+            
         }
-
+    
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
