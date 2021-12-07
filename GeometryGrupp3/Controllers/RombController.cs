@@ -15,7 +15,7 @@ namespace GeometryGrupp3.Controllers
             var area = romb.GetArea();
             ViewData["perimeter"] = perimeter;
             ViewData["area"] = area;
-            return View();
+            return View("Index");
         }
     }
 }

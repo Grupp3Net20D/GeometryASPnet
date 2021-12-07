@@ -15,7 +15,7 @@ namespace GeometryGrupp3.Controllers
             var perimeter = triangle.GetPerimeter();
             ViewData["area"] = area;        
             ViewData["perimeter"] = perimeter;
-            return View();
+            return View("Index");
         }
     }
 }

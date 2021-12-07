@@ -11,7 +11,7 @@ namespace GeometryGrupp3.Controllers
             var area = pentagon.GetArea();
             ViewData["perimeter"] = perimeter;
             ViewData["area"] = area;
-            return View();
+            return View("Index");
         }
     }
 }
