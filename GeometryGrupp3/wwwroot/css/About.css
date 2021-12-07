@@ -1,9 +1,9 @@
 ﻿body {
     background-color: #FDDEA6;
+    font-family: 'Be Vietnam Pro';
 }
 
-.textBox {
-    font-family: 'Be Vietnam Pro', sans-serif;
+.textBox {   
     font-weight: bold;
     position: fixed;
     top: 15em;
