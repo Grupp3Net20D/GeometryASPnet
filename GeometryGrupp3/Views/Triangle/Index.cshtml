@@ -13,37 +13,41 @@
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <img src="~/img/triangel.png" alt="Triangel" class="shapeImg" />
-        </header>
-        <div class="calculator">
-            <div class="numbersForm">
-                <form asp-action="Index">
-                    <h3>Kalkylator</h3>
-                    Ange sida: <input type="number" asp-for="Side" class="inputField" />
-                    <input type="submit" class="calculateButton"/>
-                </form>
-                <div class="result">
-                    <div class="perimeter">
-                        <h5>Omkrets</h5>
-                        <div class="perimeterDisplay">
-                            <p>@ViewData["perimeter"]mm</p>
+        <div class="shapeContainer">
+            <header>
+                <img src="~/img/triangel.png" alt="Triangel" class="shapeImg" />
+            </header>
+            <div class="calculator">
+                <div class="numbersForm">
+                    <form asp-action="Index">
+                        <h3>Kalkylator</h3>
+                        <h6>(millimeter)</h6>
+                        Ange sidan <input type="text" asp-for="Side" class="inputField" required/>
+                        <button type="submit" class="calculateButton">Beräkna</button>
+                    </form>
+                    <div class="result">
+                        <div class="perimeter">
+                            <h5>Omkrets</h5>
+                            <div class="perimeterDisplay">
+                                <p>@ViewData["perimeter"]mm</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="area">
-                        <h5>Area</h5>
-                        <div class="areaDisplay">
-                            <p>@ViewData["area"]mm2</p>
+                        <div class="area">
+                            <h5>Area</h5>
+                            <div class="areaDisplay">
+                                <p>@ViewData["area"]m&#13217;</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div asp-validation-summary="All"></div>
             </div>
         </div>
-        <footer class="border-top footer text-muted" id="footer">
-            <div class="container buttonFooter">
-                <p>&copy; 2021 - GeomeTre</p>
-            </div>
-        </footer>
+            <footer class="border-top footer text-muted" id="footer">
+                <div class="container buttonFooter">
+                    <p>&copy; 2021 - GeomeTre</p>
+                </div>
+            </footer>
     </body>
 </html>
 

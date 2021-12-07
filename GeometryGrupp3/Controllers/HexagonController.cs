@@ -11,7 +11,6 @@ namespace GeometryGrupp3.Controllers
     {
         public IActionResult Index(Hexagon hexagon)
         {
-            
            var area = hexagon.GetArea();
            var perimeter = hexagon.GetPerimeter();
             ViewData["perimeter"] = perimeter;
@@ -19,8 +18,5 @@ namespace GeometryGrupp3.Controllers
             
             return View("Index");
         }
-
-
-
     }
 }

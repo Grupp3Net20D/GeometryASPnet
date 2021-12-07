@@ -9,12 +9,6 @@
 
     public class RectangleController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        [HttpPost]
         public IActionResult Index(Rectangle rectangle)
         {
             var area = rectangle.GetArea();

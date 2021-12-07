@@ -53,7 +53,7 @@ namespace GeometriTDD.Geometry
         {
             if (Side > 0)
             {
-                return Side * 6;
+                return MathF.Round(Side * 6,2);
             }
             return 0;
         }
