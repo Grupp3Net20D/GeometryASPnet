@@ -16,39 +16,6 @@
 
 </div>
 <div class="contact-form">
-    @*<form asp-action="Index" asp-controller="ContactForm">
-        <label asp-for="Fname">Förnamn:</label>
-        <br>
-        <input class="form" id="fname" asp-for="Fname" name="Fname" placeholder="Förnamn" required>
-        <br>
-        <br>
-        <label asp-for="Lname">Efternamn:</label>
-        <br>
-        <input class="form" asp-for="Lname" placeholder="Efternamn" required>
-        <br>
-        <br>
-        <label asp-for="Email">Email:</label>
-        <br>
-        <input class="form" asp-for="Email" placeholder="Din email" required>
-        <br>
-        <br>
-        <label asp-for="Msg">Meddelande</label>
-        <br>
-        <textarea class="form" asp-for="Msg" placeholder="Ditt meddelande..." style="height:300px"></textarea>
-        <br>
-        <br>
-        <p>Missa inga nya former! </p>
-        <p>Vi lägger ofta till nya former att göra beräkningar på.</p>
-        <input id="subscribe" asp-for="HasSubscribedToNewsLetter" type="checkbox">
-        <label asp-for="HasSubscribedToNewsLetter">Prenumerera på vårt nyhetsbrev</label>
-        <br>
-
-        <a class="btn-primary button" href="mailto:geometre@geometre.com?subject=Hej%20GeomeTre&body=Följande%20person%20har%20skrivit%20till%20dig%20via%20kontaktformuläret:\n\nNamn:@test.Fname">Skicka med html</a>
-        <a class="btn-primary button" href=@ViewData["input"]>Skicka med ViewData</a>
-        <button type="submit" class="btn-primary button" onclick="submitForm();">Skicka med javascript</button>
-        <input class="btn-primary button" type="submit" value="Skicka till skrivbord" />
-    </form>*@
-
     <form name="subscribe" id="subscribe_frm" action="#">
         <label for="Fname">Förnamn:</label>
         <br>
@@ -76,10 +43,9 @@
         <label for="Subscribe">Prenumerera på vårt nyhetsbrev</label>
         <br>
         <input class="btn-primary button" type="button" name="submit" value="Skicka" onclick="submitForm();" />
-
     </form>
-    
 </div>
+
 <script>
     function submitForm() {
         var fname = document.getElementById("Fname");
