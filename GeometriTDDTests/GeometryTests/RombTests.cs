@@ -38,7 +38,7 @@ namespace GeometriTDDTests.GeometryTests
 
         [TestMethod]
         [DataRow(1f, null, 0f)]
-        [DataRow(0f, 2f, 0f)]
+        [DataRow(0f, 0f, 0f)]
         public void Rhombus_CalculatesPerimeterWithNegativeValues_ReturnsZero(float heigth, float side, float expected)
         {
             //Arrange 
@@ -51,7 +51,7 @@ namespace GeometriTDDTests.GeometryTests
 
         [TestMethod]
         [DataRow(1f, null, 0f)]
-        [DataRow(0f, 2f, 0f)]
+        [DataRow(0f, 0f, 0f)]
         public void Rhombus_CalculatesAreaWithNegativeValues_ReturnsZero(float heigth, float side, float expected)
         {
             //Arrange 
