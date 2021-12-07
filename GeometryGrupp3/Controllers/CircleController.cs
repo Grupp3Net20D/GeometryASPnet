@@ -9,12 +9,6 @@
 
     public class CircleController : Controller
     {
-        public IActionResult Index()
-        {
-            return View("Index");
-        }
-
-        [HttpPost]
         public IActionResult Index(Circle circle)
         {
             var inputRadius = circle.Radie;

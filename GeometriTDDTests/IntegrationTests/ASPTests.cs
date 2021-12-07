@@ -1,10 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using GeometryGrupp3.Controllers;
 using GeometriTDD.Geometry;
-using System.Threading;
 using Moq;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -23,12 +20,15 @@ namespace GeometriTDDTests.IntegrationTests
             Assert.AreEqual("Index", result.ViewName);
         }
 
+        /// <summary>
+        /// Integration test
+        /// </summary>
         [TestMethod()]
         public void CircleViewTest()
         {
             Circle circle = new();
             CircleController controller = new CircleController();
-            var result = controller.Index() as ViewResult;
+            var result = controller.Index(circle) as ViewResult;
             Assert.AreEqual("Index", result.ViewName);
             
             circle.Radie = 10;
@@ -37,6 +37,9 @@ namespace GeometriTDDTests.IntegrationTests
             Assert.AreEqual(assert, actual);
         }
 
+        /// <summary>
+        /// Integration test
+        /// </summary>
         [TestMethod()]
         public void TriangleViewTest()
         {
@@ -51,6 +54,9 @@ namespace GeometriTDDTests.IntegrationTests
             Assert.AreEqual(assert, actual);
         }
         
+        /// <summary>
+        /// Integration test
+        /// </summary>
         [TestMethod()]
         public void RombViewTest()
         {
@@ -67,14 +73,27 @@ namespace GeometriTDDTests.IntegrationTests
         }
 
 
+        /// <summary>
+        /// System test
+        /// </summary>
         [TestMethod()]
         public void SystemTest()
         {
-            var mock = new Mock<ILogger<HomeController>>();
-            ILogger<HomeController> logger = mock.Object;
-            HomeController homeController = new HomeController(logger);
+            var homeMock = new Mock<ILogger<HomeController>>();
+            ILogger<HomeController> homeLogger = homeMock.Object;
+            HomeController homeController = new HomeController(homeLogger);
             var homeResult = homeController.Index() as ViewResult;
             Assert.AreEqual("Index", homeResult.ViewName);
+
+            var contactMock = new Mock<ILogger<ContactFormController>>();
+            ILogger<ContactFormController> contactLogger = contactMock.Object;
+            ContactFormController contactController = new ContactFormController(contactLogger);
+            var contactResult = contactController.Index() as ViewResult; 
+            Assert.AreEqual("Index", contactResult.ViewName);
+
+            AboutController aboutController = new();
+            var aboutResult = aboutController.Index() as ViewResult;
+            Assert.AreEqual("Index", aboutResult.ViewName);
 
             Circle circle = new();
             Hexagon hexagon = new();
