@@ -11,7 +11,7 @@ namespace GeometryGrupp3.Controllers
             var perimeter = square.GetPerimeter();
             ViewData["area"] = area;
             ViewData["perimeter"] = perimeter;
-            return View();
+            return View("Index");
         }
     }
 }
