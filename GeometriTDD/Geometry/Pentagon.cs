@@ -19,7 +19,7 @@ namespace GeometriTDD.Geometry
 
         }
 
-        public override float GetArea() // TODO: Avrunda två decimaler eller heltal?
+        public override float GetArea()
         {
             if (Side > 0)
             {
@@ -35,7 +35,7 @@ namespace GeometriTDD.Geometry
         {
             if (Side > 0)
             {
-                return Side * 5;
+                return MathF.Round(Side * 5,2);
             }
             return 0;
         }

@@ -1,0 +1,35 @@
+﻿body {
+    background-color: #FDDEA6;
+    font-family: 'Be Vietnam Pro';
+}
+
+.textBox {   
+    font-weight: bold;
+    position: fixed;
+    top: 15em;
+    width: 25em;
+    left: 37vw;
+    border-style: solid;
+    background-color: #479A76;
+    padding: 1em;
+    text-align: center;
+}
+
+.buttonFooter {
+    background-color: #FEB93F;
+    width: 15em;
+    height: 3em;
+    border-radius: 3%;
+    position: fixed;
+    left: 42.5vw;
+    bottom: 1em;
+    text-align: center;
+    padding: 1em;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 6em;
+}
