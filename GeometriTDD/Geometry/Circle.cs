@@ -52,7 +52,7 @@ namespace GeometriTDD.Geometry
         {
             if (Radie > 0)
             {
-                return MathF.Round((Radie * 2) * 3.1415926535f,2);
+                return MathF.Round((Radie * 2) * 3.1415926535f, 2);
             }
             return 0;
         }

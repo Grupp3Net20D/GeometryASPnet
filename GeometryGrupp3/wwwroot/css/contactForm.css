@@ -48,8 +48,8 @@ body {
     transform: scale(1.1);
     transition: 0.5s;
 }
-.contact-form p{
-    font-weight:700; 
+.newsletterInfo {
+    font-weight: 700;
 }
 #subscribe {
     width: 20px;

@@ -15,7 +15,7 @@
             var perimeter = rectangle.GetPerimeter();
             ViewData["area"] = area;
             ViewData["perimeter"] = perimeter;
-            return View();
+            return View("Index");
         }
     }
 }
