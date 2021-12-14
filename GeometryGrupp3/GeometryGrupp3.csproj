@@ -21,43 +21,43 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="wwwroot\Img\cirkel.png">
+    <Content Update="wwwroot\img\cirkel.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\Img\cirkelHome.png">
+    <Content Update="wwwroot\pictures\cirkelHome.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\Img\hexagon.png">
+    <Content Update="wwwroot\pictures\hexagon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\Img\hexagonHome.png">
+    <Content Update="wwwroot\pictures\hexagonHome.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\Img\kvadrat.png">
+    <Content Update="wwwroot\pictures\kvadrat.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\Img\logo.png">
+    <Content Update="wwwroot\pictures\logo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\Img\pentagon.png">
+    <Content Update="wwwroot\pictures\pentagon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\Img\pentagonHome.png">
+    <Content Update="wwwroot\pictures\pentagonHome.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\Img\rektangel.png">
+    <Content Update="wwwroot\pictures\rektangel.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\Img\romb.png">
+    <Content Update="wwwroot\pictures\romb.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\Img\rombHome.png">
+    <Content Update="wwwroot\pictures\rombHome.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\Img\triangel.png">
+    <Content Update="wwwroot\pictures\triangel.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\Img\triangelHome.png">
+    <Content Update="wwwroot\pictures\triangelHome.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
