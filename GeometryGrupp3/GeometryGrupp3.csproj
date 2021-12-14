@@ -24,40 +24,40 @@
     <Content Update="wwwroot\img\cirkel.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\img\cirkelHome.png">
+    <Content Update="wwwroot\pictures\cirkelHome.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\img\hexagon.png">
+    <Content Update="wwwroot\pictures\hexagon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\img\hexagonHome.png">
+    <Content Update="wwwroot\pictures\hexagonHome.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\img\kvadrat.png">
+    <Content Update="wwwroot\pictures\kvadrat.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\img\logo.png">
+    <Content Update="wwwroot\pictures\logo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\img\pentagon.png">
+    <Content Update="wwwroot\pictures\pentagon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\img\pentagonHome.png">
+    <Content Update="wwwroot\pictures\pentagonHome.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\img\rektangel.png">
+    <Content Update="wwwroot\pictures\rektangel.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\img\romb.png">
+    <Content Update="wwwroot\pictures\romb.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\img\rombHome.png">
+    <Content Update="wwwroot\pictures\rombHome.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\img\triangel.png">
+    <Content Update="wwwroot\pictures\triangel.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\img\triangelHome.png">
+    <Content Update="wwwroot\pictures\triangelHome.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
