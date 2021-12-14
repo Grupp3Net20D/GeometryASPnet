@@ -18,7 +18,7 @@ Vi har dock diskuterat och inser att det hade varit mycket användbart i ett st�
 # Status badges:  
 Vi har valt att använda oss av status badges i readme-filen för att snabbt kunna se status på senaste workflow runet i respektive miljö.
 
-# Status badges:
+# Visualisering:
 ![WorkFlowDiagram.drawio](Visualisering.drawio.png)
 
 # Länkar
